@@ -1,3 +1,5 @@
+import 'package:langcheck/flutter_flow/internationalization.dart';
+
 import '../flutter_flow/flutter_flow_language_selector.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
