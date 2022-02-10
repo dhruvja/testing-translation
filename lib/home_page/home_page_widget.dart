@@ -58,7 +58,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             controller: textController,
                             obscureText: false,
                             decoration: InputDecoration(
-                              hintText: 'Enter value',
+                              hintText: FFLocalizations.of(context).getText(
+                                '8hdavenl' /* Enter value */,
+                              ),
                               enabledBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(
                                   color: Color(0x00000000),

@@ -9,7 +9,7 @@ class FFLocalizations {
   static FFLocalizations of(BuildContext context) =>
       Localizations.of<FFLocalizations>(context, FFLocalizations);
 
-  static List<String> languages() => ['en'];
+  static List<String> languages() => ['en', 'kn'];
 
   String get languageCode => locale.languageCode;
   int get languageIndex => languages().contains(languageCode)
@@ -21,8 +21,9 @@ class FFLocalizations {
 
   String getVariableText({
     String en = '',
+    String kn = '',
   }) =>
-      [en][languageIndex] ?? '';
+      [en, kn][languageIndex] ?? '';
 }
 
 class FFLocalizationsDelegate extends LocalizationsDelegate<FFLocalizations> {
@@ -40,5 +41,12 @@ class FFLocalizationsDelegate extends LocalizationsDelegate<FFLocalizations> {
   bool shouldReload(FFLocalizationsDelegate old) => false;
 }
 
-final kTranslationsMap =
-    <Map<String, Map<String, String>>>[].reduce((a, b) => a..addAll(b));
+final kTranslationsMap = <Map<String, Map<String, String>>>[
+  // HomePage
+  {
+    '8hdavenl': {
+      'en': 'Enter value',
+      'kn': 'ಮೌಲ್ಯವನ್ನು ನಮೂದಿಸಿ',
+    },
+  },
+].reduce((a, b) => a..addAll(b));
